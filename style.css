@@ -1,0 +1,135 @@
+/* variables */
+:root {
+    --text-clr-900: hsl(238, 29%, 16%);
+    --text-accent: hsl(14, 88%, 65%);
+    --text-neutral-800: hsl(237, 12%, 33%);
+    --text-neutral-700: hsl(240, 6%, 50%);
+
+    --clr-neutral: hsl(240, 5%, 91%);
+
+    --clr-gradient-top: hsl(273, 75%, 66%);
+    --clr-gradient-bottom: hsl(240, 73%, 65%);
+
+}
+
+/* global classes */
+
+body * {
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom));
+    
+}
+
+/* auxiliary classes */
+
+.split {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+background-color: white;
+border-radius: 1.5rem;
+   margin-top: 8rem;
+   margin-left: 17rem;
+   margin-bottom: 8rem;
+   
+    width: min(90%, 58rem);
+
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 4.5rem 1.5rem;
+    flex-basis: 100%;
+
+    height: 32rem;
+}
+/* modifier to hide faq text */
+.hidden {
+    display: none;
+}
+/* ---------------- */
+.image {
+    
+    flex-basis: 100%;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    
+    
+    background-image: url(images/illustration-woman-online-desktop.svg), url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -5.75rem 4.25rem, -36.5rem -18rem;
+}
+
+.cube {
+    transform: translate(-6rem, 2.25rem);
+    
+}
+
+
+.icon {
+    float: right;
+}
+
+/* other classes */
+
+.heading {
+    padding-bottom: 1.2rem;
+}
+
+.faqs {
+    width: 78%;
+    list-style-type: none;
+    
+    
+    
+}
+
+.faq {
+    border-bottom: 1px solid var(--clr-neutral);
+    padding: 1.12rem 0;
+}
+
+.faq-title {
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--text-neutral-800);
+    
+    
+}
+/* modifiers for selected faq title and icon */
+.selected {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--text-clr-900);
+    
+}
+
+.selected .icon {
+    transform: rotate(180deg);
+}
+/* ------------ */
+.faq-text {
+    font-size: .7rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    color: var(--text-neutral-700);
+    line-height: 1rem;
+    
+}
+
+/* media queries */
