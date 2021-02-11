@@ -15,7 +15,6 @@
 /* global classes */
 
 body * {
-    /* border: 1px solid black; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -59,11 +58,8 @@ border-radius: 1.5rem;
     
     
 }
-/* modifier to hide faq text */
-.hidden {
-    display: none;
-}
-/* ---------------- */
+
+/* image classes for mobile vs desktop version */
 .image-mobile {
     
     background-image: url(images/bg-pattern-mobile.svg);
@@ -84,9 +80,6 @@ border-radius: 1.5rem;
     display: inline-block;
     
     
-    
-
-    
 }
 
 .image-desktop {
@@ -94,20 +87,7 @@ border-radius: 1.5rem;
     
 }
 
-
-
-.icon {
-    float: right;
-}
-
-/* other classes */
-
-.heading {
-    text-align: center;
-    padding-bottom: 1.2rem;
-}
-
-
+/* accordion list classes */
 .faqs {
     width: 100%;
     list-style-type: none; 
@@ -142,8 +122,17 @@ border-radius: 1.5rem;
     cursor: pointer;
 
 }
-/* modifiers for selected faq title and icon */
-.selected {
+.icon {
+    float: right;
+}
+
+/* modifiers for selected faq item*/
+
+.hidden p{
+    display: none;
+}
+
+.selected .faq-title{
     font-size: .9rem;
     font-weight: 700;
     color: var(--text-clr-900);
@@ -166,6 +155,12 @@ border-radius: 1.5rem;
     transform: rotate(180deg);
 }
 /* ------------ */
+
+.heading {
+    text-align: center;
+    padding-bottom: 1.2rem;
+}
+
 .faq-text {
     font-size: .7rem;
     font-weight: 400;
@@ -189,6 +184,7 @@ border-radius: 1.5rem;
         height: 32rem;
     }
 
+    /* image change for desktop version */
     .image-desktop {
     
         flex-basis: 100%;
@@ -216,7 +212,7 @@ border-radius: 1.5rem;
     .image-mobile {
         display: none;
     }
-
+/* -------------------- */
     .heading {
         text-align: left;
     }
